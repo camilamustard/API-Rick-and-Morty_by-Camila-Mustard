@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">  
+    <link rel="stylesheet" href="star warsss.css">
+    <style ></style>
+    <head> <meta charset="utf-8">>
+        <title></title>
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">"
+        <button type="button" id="button">Find someone</button>
+
+        <h1>May the force be with you</h1>
+
+    </head>
+
+    <body>
+        <h1 id="title">Starwars API- Camila-</h1>
+        <div class="container">
+
+        </div>
+
+        <script>
+             fetch ('https://swapi.dev/api/people/1/', {
+                 method='GET'
+             })
+             .then (Response =>Response.json)
+             .then (function(json) {
+                 var container = document.querySelector('container');
+                 json.results.map(function(results){
+
+
+                    container.innerHTML=div+=`
+                    <div> <img src`  + results.image  + `>
+                        </div>
+                        <hr>
+                 `;})   
+             })
+
+
+        </script>
+       
+
+                   
+        
+
+    </body>
+
+</html>
